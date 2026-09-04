@@ -1,0 +1,57 @@
+// ==========================================
+// ABSTRACTS: MIXINS
+// ==========================================
+@use 'sass:map';
+@use 'variables' as v;
+
+// Mixin 1: Reusable Flexbox Layout Helper
+@mixin flex-box(
+  $justify: flex-start,
+  $align: stretch,
+  $direction: row,
+  $gap: 0,
+  $wrap: nowrap
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// Mixin 2: Reusable Surface / Card Styling
+@mixin card-style(
+  $bg: v.$clr-surface,
+  $border: v.$clr-border,
+  $radius: v.$radius,
+  $padding: v.$spacing-lg,
+  $shadow: v.$shadow-base
+) {
+  background-color: $bg;
+  border: 1px solid $border;
+  border-radius: $radius;
+  box-shadow: $shadow;
+  padding: $padding;
+}
+
+// Mixin 3: Responsive Breakpoint Media Query
+@mixin respond-to($breakpoint) {
+  @if map.has-key(v.$breakpoints, $breakpoint) {
+    $breakpoint-value: map.get(v.$breakpoints, $breakpoint);
+    @media (max-width: $breakpoint-value) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Mixin 4: Smooth Transition Helper
+@mixin transition($property: all, $duration: 0.2s, $ease: ease-in-out) {
+  transition: $property $duration $ease;
+}

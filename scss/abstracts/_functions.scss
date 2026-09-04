@@ -1,0 +1,13 @@
+// ==========================================
+// ABSTRACTS: FUNCTIONS
+// ==========================================
+@use 'sass:math';
+
+// Helper function to convert pixel to rem
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) * 1rem;
+  } @else {
+    @error 'Jangan sertakan satuan saat menggunakan fungsi rem(); hanya angka.';
+  }
+}

@@ -1,0 +1,71 @@
+// ==========================================
+// ABSTRACTS: VARIABLES
+// ==========================================
+
+// Color Palette
+$clr-primary: #22c55e;
+$clr-primary-hover: #16a34a;
+$clr-bg: #001a08;
+$clr-surface: #002e0b;
+$clr-text: #dcfce7;
+$clr-text-muted: #86efac;
+$clr-border: #14532d;
+$clr-white: #ffffff;
+
+// Dark Mode Theme Overrides
+$clr-dark-primary: #4ade80;
+$clr-dark-bg: #000f04;
+$clr-dark-surface: #001a08;
+$clr-dark-text: #f0fdf4;
+$clr-dark-text-muted: #6ee7b7;
+$clr-dark-border: #064e1a;
+$shadow-dark: 0 2px 12px rgba(0, 0, 0, 0.6);
+
+// Spacing System
+$spacing-xs: 0.25rem;  // 4px
+$spacing-sm: 0.5rem;   // 8px
+$spacing-md: 1rem;     // 16px
+$spacing-lg: 1.25rem;  // 20px
+$spacing-xl: 1.5rem;   // 24px
+$spacing-2xl: 2.5rem;  // 40px
+$spacing-3xl: 3rem;    // 48px
+
+// Spacing Map (for loop/utility generation)
+$spacings: (
+  "none": 0,
+  "xs": $spacing-xs,
+  "sm": $spacing-sm,
+  "md": $spacing-md,
+  "lg": $spacing-lg,
+  "xl": $spacing-xl,
+  "2xl": $spacing-2xl,
+  "3xl": $spacing-3xl
+);
+
+// Typography & Font Tokens
+$font-main: 'Inter', sans-serif;
+$font-weight-regular: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Border Radius & Shadows
+$radius-sm: 6px;
+$radius-md: 10px;
+$radius: $radius-md;
+$shadow-base: 0 2px 12px rgba(0, 0, 0, 0.4);
+
+// Breakpoints for Responsive Design
+$breakpoints: (
+  "sm": 576px,
+  "md": 768px,
+  "lg": 992px,
+  "xl": 1200px
+);
+
+// Skill Card Accent Accent Colors for @each loop demo
+$skill-accents: (
+  "html": #e34f26,
+  "css": #1572b6,
+  "ui": #f24e1e,
+  "git": #f05032
+);
