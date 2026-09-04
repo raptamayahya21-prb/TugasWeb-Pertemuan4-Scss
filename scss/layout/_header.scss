@@ -1,0 +1,31 @@
+// ==========================================
+// LAYOUT: HEADER & NAVIGATION
+// ==========================================
+@use '../abstracts' as a;
+
+.site-header {
+  @include a.flex-box($justify: space-between, $align: center);
+  padding: a.$spacing-md 0;
+  border-bottom: 1px solid var(--clr-border);
+  margin-bottom: a.$spacing-2xl;
+
+  &__name {
+    font-weight: a.$font-weight-bold;
+  }
+}
+
+.nav-list {
+  @include a.flex-box($gap: a.$spacing-xl);
+
+  &__link {
+    font-size: 0.875rem;
+    font-weight: a.$font-weight-semibold;
+    color: var(--clr-text-muted);
+    @include a.transition(color);
+
+    &:hover {
+      color: var(--clr-primary);
+      text-decoration: none;
+    }
+  }
+}

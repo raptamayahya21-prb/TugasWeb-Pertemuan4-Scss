@@ -1,0 +1,16 @@
+// ==========================================
+// LAYOUT: FOOTER
+// ==========================================
+@use '../abstracts' as a;
+
+.site-footer {
+  border-top: 1px solid var(--clr-border);
+  padding: a.$spacing-md 0;
+  text-align: center;
+  margin-top: a.$spacing-md;
+
+  &__text {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+  }
+}

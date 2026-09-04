@@ -1,0 +1,35 @@
+// ==========================================
+// BASE: BASE RULES
+// ==========================================
+@use '../abstracts' as a;
+
+:root {
+  --clr-primary: #{a.$clr-primary};
+  --clr-bg: #{a.$clr-bg};
+  --clr-surface: #{a.$clr-surface};
+  --clr-text: #{a.$clr-text};
+  --clr-text-muted: #{a.$clr-text-muted};
+  --clr-border: #{a.$clr-border};
+  --font-main: #{a.$font-main};
+  --radius: #{a.$radius};
+  --shadow: #{a.$shadow-base};
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+}
+
+a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  @include a.transition(color);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
