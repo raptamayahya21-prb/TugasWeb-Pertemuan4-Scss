@@ -1,0 +1,22 @@
+{
+  "name": "tugasweb-pertemuan4-scss",
+  "version": "1.0.0",
+  "description": "Tugas Rutin 4: Konversi CSS ke SCSS dengan arsitektur 7-1 pattern",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "sass scss/main.scss style.css --style=expanded --source-map",
+    "watch:sass": "sass --watch scss/main.scss:style.css --style=expanded --source-map",
+    "build": "sass scss/main.scss style.css --style=compressed"
+  },
+  "keywords": [
+    "scss",
+    "sass",
+    "7-1 pattern",
+    "portfolio"
+  ],
+  "author": "Raptama Yahya Purba",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.85.0"
+  }
+}
