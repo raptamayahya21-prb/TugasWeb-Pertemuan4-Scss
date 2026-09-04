@@ -4,7 +4,7 @@ Project ini merupakan implementasi konversi stylesheet portofolio ke **SCSS** me
 
 ---
 
-## 📂 Struktur Folder
+##  Struktur Folder
 
 ```text
 ├── index.html
@@ -23,7 +23,7 @@ Project ini merupakan implementasi konversi stylesheet portofolio ke **SCSS** me
 
 ---
 
-## 🚀 Cara Menjalankan
+##  Cara Menjalankan
 
 1. **Install dependensi:**
    ```bash
