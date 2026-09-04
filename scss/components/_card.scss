@@ -1,0 +1,101 @@
+// ==========================================
+// COMPONENTS: CARDS & FIGURES
+// ==========================================
+@use '../abstracts' as a;
+
+// Shared Card Surface Foundation
+.about-section__body,
+.project-card,
+.contact-form {
+  @include a.card-style();
+}
+
+// Profile Figure Component
+.profile-figure {
+  &__img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    border: 2px solid var(--clr-border);
+  }
+
+  &__caption {
+    font-size: 0.75rem;
+    color: var(--clr-text-muted);
+    margin-top: a.$spacing-sm;
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+
+// Skill Card Component (Nesting max 2-3 level)
+.skill-card {
+  flex: 1 1 180px;
+  @include a.card-style($padding: a.$spacing-md);
+  @include a.transition(border-color);
+
+  &:hover {
+    border-color: var(--clr-primary);
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+
+  &__title {
+    font-size: 0.9rem;
+    font-weight: a.$font-weight-bold;
+    margin-bottom: 0.2rem;
+  }
+
+  &__desc {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+  }
+}
+
+// Project Card Component
+.project-card {
+  &__title {
+    font-size: 1.05rem;
+    font-weight: a.$font-weight-bold;
+    margin-bottom: 0.4rem;
+  }
+
+  &__desc {
+    font-size: 0.875rem;
+    color: var(--clr-text-muted);
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__meta {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__link {
+    font-size: 0.875rem;
+    font-weight: a.$font-weight-semibold;
+  }
+}
+
+// Project Aside Component
+.projects-aside {
+  @include a.card-style($padding: a.$spacing-md);
+  border-left: 3px solid var(--clr-primary);
+
+  &__title {
+    font-size: 0.9rem;
+    font-weight: a.$font-weight-bold;
+    margin-bottom: a.$spacing-sm;
+  }
+
+  &__text {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+  }
+}

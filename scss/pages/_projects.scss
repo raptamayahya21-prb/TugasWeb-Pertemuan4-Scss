@@ -1,0 +1,17 @@
+// ==========================================
+// PAGES: PROJECTS SECTION
+// ==========================================
+@use '../abstracts' as a;
+
+.projects-section {
+  &__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: a.$spacing-md;
+    align-items: start;
+
+    @include a.respond-to("md") {
+      grid-template-columns: 1fr;
+    }
+  }
+}

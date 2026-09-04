@@ -1,0 +1,32 @@
+// ==========================================
+// PAGES: SKILLS SECTION
+// ==========================================
+@use '../abstracts' as a;
+
+.skills-list {
+  @include a.flex-box($wrap: wrap, $gap: a.$spacing-md);
+}
+
+// ==========================================
+// Requirement: Minimal 1 Perulangan (@each)
+// Mengenerate class modifikasi aksen untuk masing-masing kartu skill
+// ==========================================
+@each $skill-name, $accent-color in a.$skill-accents {
+  .skill-card--#{$skill-name} {
+    border-top: 2px solid $accent-color;
+
+    &:hover {
+      border-color: $accent-color;
+      box-shadow: 0 4px 16px rgba($accent-color, 0.25);
+    }
+  }
+}
+
+// ==========================================
+// Loop @for untuk animasi delay bertingkat pada item skill
+// ==========================================
+@for $i from 1 through 4 {
+  .skills-list .skill-card:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.1}s;
+  }
+}

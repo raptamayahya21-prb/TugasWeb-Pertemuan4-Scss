@@ -1,0 +1,14 @@
+// ==========================================================================
+// MAIN SASS ENTRY POINT (7-1 Pattern Architecture)
+// Tugas Rutin 4: Konversi CSS ke SCSS
+// Author: Raptama Yahya Purba
+// ==========================================================================
+
+// 1. Modern SCSS Module Imports via @use
+@use 'abstracts';
+@use 'vendors';
+@use 'base';
+@use 'layout';
+@use 'components';
+@use 'pages';
+@use 'themes';

@@ -1,0 +1,16 @@
+// ==========================================
+// THEMES: DARK MODE
+// ==========================================
+@use '../abstracts' as a;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clr-primary: #{a.$clr-dark-primary};
+    --clr-bg: #{a.$clr-dark-bg};
+    --clr-surface: #{a.$clr-dark-surface};
+    --clr-text: #{a.$clr-dark-text};
+    --clr-text-muted: #{a.$clr-dark-text-muted};
+    --clr-border: #{a.$clr-dark-border};
+    --shadow: #{a.$shadow-dark};
+  }
+}

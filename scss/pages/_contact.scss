@@ -1,0 +1,12 @@
+// ==========================================
+// PAGES: CONTACT SECTION
+// ==========================================
+@use '../abstracts' as a;
+
+.contact-section {
+  &__intro {
+    font-size: 0.875rem;
+    color: var(--clr-text-muted);
+    margin-bottom: a.$spacing-lg;
+  }
+}

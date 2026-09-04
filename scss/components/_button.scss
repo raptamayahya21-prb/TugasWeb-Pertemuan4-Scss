@@ -1,0 +1,27 @@
+// ==========================================
+// COMPONENTS: BUTTONS
+// ==========================================
+@use '../abstracts' as a;
+
+.contact-form__btn {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--clr-primary);
+  color: a.$clr-white;
+  border: none;
+  border-radius: a.$radius-sm;
+  font-family: var(--font-main);
+  font-size: 0.9rem;
+  font-weight: a.$font-weight-semibold;
+  cursor: pointer;
+  @include a.transition(opacity);
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--clr-primary);
+    outline-offset: 2px;
+  }
+}

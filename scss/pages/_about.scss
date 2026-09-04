@@ -1,0 +1,30 @@
+// ==========================================
+// PAGES: ABOUT SECTION
+// ==========================================
+@use '../abstracts' as a;
+
+.about-section {
+  &__body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: a.$spacing-xl;
+    align-items: start;
+
+    @include a.respond-to("sm") {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-items: center;
+    }
+  }
+
+  &__text {
+    p {
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
